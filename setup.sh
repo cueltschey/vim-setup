@@ -15,6 +15,9 @@ Plug 'jremmen/vim-ripgrep'
 
 call plug#end()
 
+set number
+set complete=.,w,b,u,t
+
 nnoremap <Space><Space> :Files<CR>
 nnoremap <Space>sg :Rg<Space>
 
@@ -22,3 +25,4 @@ colorscheme habamax
 EOF
 
 echo "Install Complete"
+
