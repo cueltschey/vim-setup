@@ -11,6 +11,7 @@ cat << EOF > ~/.vimrc
 call plug#begin('~/.vim/plugged')
 
 Plug 'junegunn/fzf.vim'
+
 Plug 'jremmen/vim-ripgrep'
 
 call plug#end()
@@ -20,6 +21,15 @@ set complete=.,w,b,u,t
 
 nnoremap <Space><Space> :Files<CR>
 nnoremap <Space>sg :Rg<Space>
+
+nnoremap H :bprevious<CR>
+nnoremap L :bnext<CR>
+
+nnoremap <C-/> :terminal bash<CR>
+tnoremap <C-/> <C-\><C-n>:bd!<CR>
+
+set clipboard=unnamedplus
+
 
 colorscheme habamax
 EOF
